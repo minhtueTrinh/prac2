@@ -3,6 +3,7 @@ from mmu import MMU
 
 class ClockMMU(MMU):
     def __init__(self, frames):
+        # TODO: Constructor logic for ClockMMU
         if frames < 1:
             raise ValueError("Frame number must be at least 1")
         self.frames_capacity = frames
@@ -26,12 +27,15 @@ class ClockMMU(MMU):
         self.debug = False
 
     def set_debug(self):
+        # TODO: Implement the method to set debug mode
         self.debug = True
 
     def reset_debug(self):
+        # TODO: Implement the method to reset debug mode
         self.debug = False
 
     def read_memory(self, page_number):
+        # TODO: Implement the method to read memory
         #HIT 
         for i, frame in enumerate(self.frames):
             if frame is not None and frame['page_number'] == page_number:
@@ -141,10 +145,13 @@ class ClockMMU(MMU):
             break
 
     def get_total_disk_reads(self):
+        # TODO: Implement the method to get total disk reads
         return self.disk_reads
 
     def get_total_disk_writes(self):
+        # TODO: Implement the method to get total disk writes
         return self.disk_writes
 
     def get_total_page_faults(self):
+        # TODO: Implement the method to get total page faults
         return self.page_faults
